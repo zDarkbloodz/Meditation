@@ -29,7 +29,7 @@ function App() {
     mountRef.current.appendChild(renderer.domElement);
 
     const objects = [];
-    const objectCount = 30;
+    const objectCount = 10;
     
     // Create orbital paths with wider spread
     const orbits = [
@@ -83,14 +83,14 @@ function App() {
         envMapIntensity: 1.5,
         attenuationColor: new THREE.Color(Math.random(), Math.random(), Math.random()),
         attenuationDistance: 0.5,
-        opacity: 0.8,
+        opacity: 1.8,
         side: THREE.DoubleSide
       });
     };
 
     // Create spikes for virus
     const createSpikes = (parentObject, radius) => {
-      const spikeCount = 20;
+      const spikeCount = 1;
       const spikeGeometry = new THREE.ConeGeometry(radius * 0.1, radius * 0.3, 4);
       const spikeMaterial = new THREE.MeshPhysicalMaterial({
         color: 0xffffff,
