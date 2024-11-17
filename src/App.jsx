@@ -90,7 +90,7 @@ function App() {
 
     // Create spikes for virus
     const createSpikes = (parentObject, radius) => {
-      const spikeCount = 1;
+      const spikeCount = 20;
       const spikeGeometry = new THREE.ConeGeometry(radius * 0.1, radius * 0.3, 4);
       const spikeMaterial = new THREE.MeshPhysicalMaterial({
         color: 0xffffff,
