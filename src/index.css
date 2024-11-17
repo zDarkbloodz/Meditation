@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background: linear-gradient(125deg, #000428 0%, #004e92 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+  
+}
+
+
+.glassmorphism {
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 8px 32px 0 rgba(31, 38, 135, 0.37),
+    inset 0 0 32px 0 rgba(255, 255, 255, 0.1);
+}
+
+.connecting-line {
+  stroke: rgba(255, 9, 9, 0.426);
+  stroke-width: 2;
+  filter: drop-shadow(0 0 8px rgba(255,255,255,0.2));
+  animation: flowLine 20s linear infinite;
+}
+
+@keyframes flowLine {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+    text-shadow: 0 5px 15px rgba(255,255,255,0.3);
+  }
+  15% {
+    transform: translateY(-20px);
+    text-shadow: 0 25px 15px rgba(255,255,255,0.2);
+  }
+  20% {
+    transform: translateY(0px);
+    text-shadow: 0 5px 15px rgba(255,255,255,0.3);
+  }
+}
+
+/* Font */
+.font-meditation {
+  font-family: 'Great Vibes', cursive;
+  text-shadow: 
+    0 0 10px rgba(255,255,255,0.3),
+    0 0 20px rgba(255,255,255,0.2),
+    0 0 30px rgba(255,255,255,0.1);
+  animation: softGlow 3s ease-in-out infinite;
+  animation: breath 5s ease-in-out infinite;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .font-meditation {
+    font-size: 3rem;
+  }
+  
+  .connecting-line {
+    display: none;
+  }
+}
+
+/* Add this to your index.css */
+.shadow-glow {
+  text-shadow: 
+    0 0 10px rgba(255,255,255,0.3),
+    0 0 20px rgba(255,255,255,0.2),
+    0 0 30px rgba(255,255,255,0.1);
+  animation: softGlow 3s ease-in-out infinite;
+}
+
+@keyframes softGlow {
+  0%, 100% {
+    text-shadow: 
+      0 0 10px rgba(255,255,255,0.3),
+      0 0 20px rgba(255,255,255,0.2),
+      0 0 30px rgba(255,255,255,0.1);
+  }
+  50% {
+    text-shadow: 
+      0 0 15px rgba(255,255,255,0.4),
+      0 0 25px rgba(255,255,255,0.3),
+      0 0 35px rgba(255,255,255,0.2);
+  }
+}
