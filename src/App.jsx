@@ -36,7 +36,7 @@ function App() {
       { radius: 15, speed: 0.0008, height: 4, pulseSpeed: 0.001 },
       { radius: 20, speed: -0.0012, height: -3, pulseSpeed: 0.0015 },
       { radius: 25, speed: 0.0015, height: 2, pulseSpeed: 0.002 },
-      { radius: 26, speed: -0.001, height: -4, pulseSpeed: 0.0012 }
+      { radius: 30, speed: -0.001, height: -4, pulseSpeed: 0.0012 }
 
     ];
     
@@ -83,7 +83,7 @@ function App() {
         envMapIntensity: 1.5,
         attenuationColor: new THREE.Color(Math.random(), Math.random(), Math.random()),
         attenuationDistance: 0.5,
-        opacity: 1.8,
+        opacity: 4.8,
         side: THREE.DoubleSide
       });
     };
@@ -116,7 +116,7 @@ function App() {
 
     // Add volumetric lighting effect
     const addVolumetricLight = (color, position) => {
-      const geometry = new THREE.CylinderGeometry(0, 3, 15, 32);
+      const geometry = new THREE.CylinderGeometry(0, 0, 0, 0);
       const material = new THREE.MeshBasicMaterial({
         color,
         transparent: true,
